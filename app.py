@@ -23,7 +23,7 @@ def favicon():
 def home():
     return jsonify({
         "status": True,
-        "owner": "Lucas Vro",
+        "owner": "Xeon Vro",
         "message": "Instagram API Running"
     })
 
@@ -36,7 +36,7 @@ def insta():
     if not url:
         return jsonify({
             "status": False,
-            "owner": "Lucas Vro",
+            "owner": "Xeon Vro",
             "message": "No URL provided"
         }), 400
 
@@ -51,7 +51,7 @@ def insta():
         if not match:
             return jsonify({
                 "status": False,
-                "owner": "Lucas Vro",
+                "owner": "Xeon Vro",
                 "message": "Invalid Instagram URL"
             }), 400
 
@@ -75,7 +75,7 @@ def insta():
 
         return jsonify({
             "status": True,
-            "owner": "Lucas Vro",
+            "owner": "Xeon Vro",
             "type": media_type,
             "media": media
         })
@@ -83,7 +83,7 @@ def insta():
     except Exception as e:
         return jsonify({
             "status": False,
-            "owner": "Lucas Vro",
+            "owner": "Xeon Vro",
             "error": str(e)
         }), 500
 
